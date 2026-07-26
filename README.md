@@ -50,6 +50,7 @@ A SQL Server portfolio project demonstrating data exploration, cleaning, joins, 
 ✔ RIGHT JOIN
 ✔ CROSS JOIN
 ✔ Subqueries
+✔ CTE
 ✔ EXISTS
 ✔ NOT EXISTS
 ✔ ANY
