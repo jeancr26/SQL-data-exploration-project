@@ -2,7 +2,7 @@
 =====================================================
 Database: Store
 Purpose: Create product and manufacturer dataset
-Author: Jean Carlos
+Author: Jean Carlos Rodriguez
 =====================================================
 */
 
