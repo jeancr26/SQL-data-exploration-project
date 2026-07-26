@@ -16,18 +16,19 @@ A SQL Server portfolio project demonstrating data exploration, cleaning, joins, 
 ---
 ### Database Schema
 
-# Products
-# Column		Data Type
+Products
+Column		Data Type
 ProductID		INT
 ProductName	VARCHAR
 Price			DECIMAL
 ManufacturerID          INT 
 
-# Manufacturers
-# Column		Data Type
+Manufacturers
+Column		Data Type
 ManufacturerID	INT
 ManufacturerName	VARCHAR
 Country		VARCHAR
+
 
 ---
 ### SQL Topics Covered:
