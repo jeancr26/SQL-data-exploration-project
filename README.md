@@ -13,6 +13,7 @@ A SQL Server portfolio project demonstrating data exploration, cleaning, joins, 
 * JOINs
 * Subqueries
 * Business-oriented queries
+  
 ---
 ## Database Schema
 
@@ -56,6 +57,7 @@ A SQL Server portfolio project demonstrating data exploration, cleaning, joins, 
 ✔ Data Standardization
 ✔ NULL Handling
 
+
 ---
 ### Example Business Questions
 
@@ -65,6 +67,7 @@ A SQL Server portfolio project demonstrating data exploration, cleaning, joins, 
 * Which products are above the average price?
 * Which products are out of stock?
 * What is the total inventory value?
+  
 ---
 ### Skills Demonstrated
 
@@ -74,9 +77,19 @@ A SQL Server portfolio project demonstrating data exploration, cleaning, joins, 
 * Business Analysis
 * Data Cleaning
 * Data Aggregation
+  
 ---
+
 ## 🛡️License
 This project is licensed under the MIT License. You are free to use, modify, and share this project with proper attribution.
+
+## Credits and Inspiration
+
+This project was inspired by SQL practice exercises from José Juan Sánchez Hernández.
+
+The original exercises were adapted, translated, redesigned, and expanded for educational and portfolio purposes.
+
+The database schema, sample data, and SQL queries were modified to create an independent data analysis project.
 
 ## 🌟 About Me
 Hi there! I'm Jean Carlos Rodriguez,  I’m an Data Analyst Student my purpose is to adquire signficant knowledge to be able to apply it on the Data Analytics fields!
