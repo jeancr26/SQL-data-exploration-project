@@ -14,20 +14,24 @@ A SQL Server portfolio project demonstrating data exploration, cleaning, joins, 
 * Subqueries
 * Business-oriented queries
 ---
-### Database Schema
+## Database Schema
 
-Products
-Column		Data Type
-ProductID		INT
-ProductName	VARCHAR
-Price			DECIMAL
-ManufacturerID          INT 
+### Products Table
 
-Manufacturers
-Column		Data Type
-ManufacturerID	INT
-ManufacturerName	VARCHAR
-Country		VARCHAR
+| Column Name | Data Type | Description |
+|------------|-----------|-------------|
+| product_id | INT | Unique identifier for each product |
+| product_name | VARCHAR | Name of the product |
+| price | DECIMAL | Product selling price |
+| manufacturer_id | INT | Foreign key referencing manufacturers table | 
+
+
+### Manufacturers Table
+
+| Column Name | Data Type | Description |
+|------------|-----------|-------------|
+| manufacturer_id | INT | Unique identifier for each manufacturer |
+| manufacturer_name | VARCHAR | Name of the manufacturer |
 
 
 ---
