@@ -164,23 +164,21 @@ WHERE price > 400;
 
 
 -- ============================================================
--- 11. How many products belong to each price range?
+-- 11. What percentage of the catalog belongs to each manufacturer?
 -- ============================================================
 
+WITH products_total AS (	
+	SELECT
+		m.manufacturer_name,
+		COUNT(p.product_id) as total_products
+	FROM manufacturers m
+	LEFT JOIN products p
+	ON m.manufacturer_id = p.manufacturer_id
+	GROUP BY m.manufacturer_name)
 SELECT
-    CASE
-        WHEN price < 100 THEN 'Low Price'
-        WHEN price BETWEEN 100 AND 300 THEN 'Medium Price'
-        ELSE 'High Price'
-    END AS price_category,
-    COUNT(*) AS total_products
-FROM products
-GROUP BY
-    CASE
-        WHEN price < 100 THEN 'Low Price'
-        WHEN price BETWEEN 100 AND 300 THEN 'Medium Price'
-        ELSE 'High Price'
-    END;
+	manufacturer_name,
+	CONCAT(total_products *100 /SUM(total_products) OVER(),'%')
+FROM products_totalD;
 
 
 
@@ -216,21 +214,39 @@ HAVING COUNT(p.product_id) > 5;
 
 
 -- ============================================================
--- 14. Rank manufacturers by number of products.
+-- 14.Which products are the most expensive inside each brand?
+-- With subquery.
+-- With CTE
 -- ============================================================
 
-SELECT
+SELECT 
     m.manufacturer_name,
-    COUNT(p.product_id) AS total_products,
-    RANK() OVER
-    (
-        ORDER BY COUNT(p.product_id) DESC
-    ) AS manufacturer_rank
-FROM manufacturers m
-LEFT JOIN products p
-ON m.manufacturer_id = p.manufacturer_id
-GROUP BY m.manufacturer_name;
+	p.product_name,
+	p.price,
+FROM (SELECT
+		m.manufacturer_name,
+		p.product_name,
+		p.price,
+		RANK() OVER(PARTITION BY m.manufacturer_name ORDER BY price DESC) AS product_rang
+	FROM manufacturers m
+	LEFT JOIN products p
+	ON m.manufacturer_id = p.manufacturer_id) t
+WHERE product_rang = 1;
 
+
+with rango_manufacturers as (	
+	SELECT
+		m.manufacturer_name,
+		p.product_name,
+		p.price,
+		RANK() OVER(PARTITION BY m.manufacturer_name ORDER BY price DESC) AS RANNGO
+	FROM manufacturers m
+	left join products p
+	on m.manufacturer_id = p.manufacturer_id) 
+
+select *
+from rango_manufacturers
+where RANNGO =1
 
 
 -- ============================================================
