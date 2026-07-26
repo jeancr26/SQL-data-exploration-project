@@ -2,7 +2,7 @@
 A SQL Server portfolio project demonstrating data exploration, cleaning, joins, aggregations, subqueries, and business analysis using a technology products dataset.
 
 ---
-###🚀The project covers:
+### 🚀The project covers:
 
 * Database creation
 * Data exploration
@@ -14,22 +14,24 @@ A SQL Server portfolio project demonstrating data exploration, cleaning, joins, 
 * Subqueries
 * Business-oriented queries
 ---
-###Database Schema
+### Database Schema
 
-##Products
-##Column		Data Type
+## Products
+## Column		Data Type
 ProductID		INT
 ProductName	VARCHAR
 Price			DECIMAL
 ManufacturerID          INT 
 
-##Manufacturers
-##Column		Data Type
+## Manufacturers
+## Column		Data Type
 ManufacturerID	INT
 ManufacturerName	VARCHAR
 Country		VARCHAR
+
 ---
-###SQL Topics Covered:
+### SQL Topics Covered:
+
 ✔ SELECT
 ✔ WHERE
 ✔ ORDER BY
@@ -48,8 +50,9 @@ Country		VARCHAR
 ✔ ALL
 ✔ Data Standardization
 ✔ NULL Handling
+
 ---
-###Example Business Questions
+### Example Business Questions
 
 * Which manufacturer has the most expensive product?
 * What is the average product price by manufacturer?
@@ -58,7 +61,7 @@ Country		VARCHAR
 * Which products are out of stock?
 * What is the total inventory value?
 ---
-###Skills Demonstrated
+### Skills Demonstrated
 
 * Data Exploration
 * Relational Database Concepts
